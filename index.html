@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<head>
+    <title>Flashcards Review</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s, background-color 0.3s;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            background-color: #e0e0e0;
+        }
+
+        .answer {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .card:hover .answer {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flashcards Review</h1>
+    <div class="card-container">
+        <div class="card">
+            <div class="question">What is HTML?</div>
+            <div class="answer">HyperText Markup Language</div>
+        </div>
+        <div class="card">
+            <div class="question">What is CSS?</div>
+            <div class="answer">Cascading Style Sheets</div>
+        </div>
+        <div class="card">
+            <div class="question">What is JavaScript?</div>
+            <div class="answer">A programming language for the web</div>
+        </div>
+        <div class="card">
+            <div class="question">What is a function?</div>
+            <div class="answer">A block of code that performs a task</div>
+        </div>
+        <div class="card">
+            <div class="question">What is an array?</div>
+            <div class="answer">A collection of elements</div>
+        </div>
+        <div class="card">
+            <div class="question">What is a variable?</div>
+            <div class="answer">A container for storing data</div>
+        </div>
+        <div class="card">
+            <div class="question">What is a loop?</div>
+            <div class="answer">A way to repeat code</div>
+        </div>
+        <div class="card">
+            <div class="question">What is an object?</div>
+            <div class="answer">A collection of properties and methods</div>
+        </div>
+    </div>
+</body>
+</html>
